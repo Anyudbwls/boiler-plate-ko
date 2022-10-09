@@ -103,7 +103,7 @@ app.get('/api/users/auth', auth,(req,res) => {
 })
 
 app.get('/api/users/logout',auth,(req,res)=>{
-  console.log('req.user',req.user)
+  console.log('req.user',req.user);
   User.findOneAndUpdate({_id:req.user._id},
     {token : ""},
     (err, user)=>{
