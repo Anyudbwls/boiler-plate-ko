@@ -22,7 +22,7 @@ import { LOGIN_USER } from "./types";
  */
 export const loginUser = async (dataToSubmit) => {
   const request = await axios.post(
-    "http://localhost:5001/api/user/login",
+    "http://localhost:5002/api/user/login",
     dataToSubmit
   );
   console.log(request);

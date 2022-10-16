@@ -1,6 +1,6 @@
 const express = require("express"); //express 가져오기
 const app = express();
-const port = 5001;
+const port = 5002;
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const { auth } = require("./middleware/auth");
