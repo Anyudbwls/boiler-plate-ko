@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_USER } from "./types";
+import { LOGIN_USER, REGISTER_USER } from "./types";
 
 /**
  * 화살표 함수
@@ -29,6 +29,18 @@ export const loginUser = async (dataToSubmit) => {
   //request를 reducer에 넘겨줌
   return {
     type: LOGIN_USER,
+    payload: request.data,
+  };
+};
+export const registerUser = async (dataToSubmit) => {
+  const request = await axios.post(
+    "http://localhost:5001/api/user/register",
+    dataToSubmit
+  );
+  console.log(request);
+  //request를 reducer에 넘겨줌
+  return {
+    type: REGISTER_USER,
     payload: request.data,
   };
 };

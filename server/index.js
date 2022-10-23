@@ -107,9 +107,10 @@ app.get("/api/user/auth", auth, (req, res) => {
   });
 });
 
-app.get("/api/user/logout", auth, (req, res) => {
-  console.log("req.user", req.user);
+app.get("/api/users/logout", auth, (req, res) => {
+  console.log("요청 오나요? 로그아웃");
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+    console.log(user);
     if (err) return res.json({ success: false, err });
     return res.status(200).send({
       success: true,
