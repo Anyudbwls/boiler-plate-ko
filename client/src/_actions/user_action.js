@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_USER, REGISTER_USER } from "./types";
+import { LOGIN_USER, REGISTER_USER, AUTH_USER } from "./types";
 
 /**
  * 화살표 함수
@@ -44,3 +44,12 @@ export const registerUser = async (dataToSubmit) => {
     payload: request.data,
   };
 };
+export function auth() {
+  const request = axios
+    .get("http://localhost:5001/api/user/auth")
+    .then((response) => response.data);
+  return {
+    type: AUTH_USER,
+    payload: request.data,
+  };
+}

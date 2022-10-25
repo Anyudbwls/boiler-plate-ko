@@ -22,6 +22,12 @@
     "mongoose": "^6.6.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "nodemon": "^2.0.20",
+    "os-browserify": "^0.3.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }
